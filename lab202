@@ -1,0 +1,10 @@
+//2.1 ShowErrors t = new ShowErrors(5);
+error bc คลาส ShowErrors ไม่มีconstructor ที่รับintเข้ามาการเรียก new ShowErrors(5) จึงหาconstructorที่ตรงกันไม่เจอ 
+//2.2 ShowErrors t = new ShowErrors();
+    t.x(); 
+error bc คลาส ShowErrors ไม่มีการประกาศเมธอดชื่อ x() เลย  compile error 
+//2.3 Circle c;
+System.out.println("What is radius " + c.getRadius());
+c = new Circle;
+error bc เรียกใช้ c.getRadius() ก่อนที่ตัวแปร c จะถูกกำหนดค่า —ตัวแปร reference ยังไม่ได้ชี้ไปที่ object ใดๆ เลย จึงใช้งานไม่ได้และขาดวงเล็บ ต้องเป็น new Circle() การสร้าง object ต้องเรียก constructor ด้วยวงเล็บเสมอ
+กับ คลาส C ไม่มี constructor ที่รับ double เข้ามาการเรียก new C(5.0) จึงผิด 
